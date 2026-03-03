@@ -15,13 +15,11 @@ This repository contains my implementations of classical algorithms practiced fo
 - Greedy Strategy
 - Divide and Conquer
 - Dynamic Programming
-- Time Complexity Analysis
 
 ## Purpose
 
 This repository is created for:
 - Strengthening algorithmic fundamentals
 - Practicing DAA concepts
-- Preparing for exams and placements
 
 Contributions and improvements are welcome!
