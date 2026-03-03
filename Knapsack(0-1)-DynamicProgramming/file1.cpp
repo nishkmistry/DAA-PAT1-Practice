@@ -31,42 +31,13 @@ int main()
             items.push_back({w, v, (double)v / (double)w});
         }
     }
-    sort(items.begin(), items.end(), [](const Item &a, const Item &b)
-         {
-if(a.r!=b.r) return a.r>b.r;
-if(a.v!=b.v) return a.v>b.v;
-return a.w<b.w; });
     double rem = (double)W;
     double fracTotal = (double)zeroValueSum;
-    for (auto &it : items)
-    {
-        if (rem <= 0)
-            break;
-        double take = min(rem, (double)it.w);
-        fracTotal += take * it.r;
-        rem -= take;
-    }
     vector<long long> dp(W + 1, 0);
     for (auto &it : items)
     {
         long long wt = it.w;
-        long long val = (long long)it.r * 0 + (long long)llround(it.r * 0);
-        val = (long long)(it.r * it.w + 0.5);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)llround(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)llround(it.r * it.w);
+        long long val = it.v;
         for (long long cap = W; cap >= wt; --cap)
         {
             dp[cap] = max(dp[cap], dp[cap - wt] + val);

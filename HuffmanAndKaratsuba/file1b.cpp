@@ -2,42 +2,6 @@
 #include <string>
 #include <algorithm>
 using namespace std;
-string add(string num1, string num2)
-{
-    string result = "";
-    int i = num1.size() - 1, j = num2.size() - 1, carry = 0;
-    while (i >= 0 || j >= 0 || carry)
-    {
-        int sum = carry + (i >= 0 ? num1[i--] - '0' : 0) + (j >= 0 ? num2[j--] - '0' : 0);
-        result += to_string(sum % 10);
-        carry = sum / 10;
-    }
-    reverse(result.begin(), result.end());
-    return result;
-}
-string subtract(string num1, string num2)
-{
-    string result = "";
-    int i = num1.size() - 1, j = num2.size() - 1, borrow = 0;
-    while (i >= 0)
-    {
-        int sub = (num1[i--] - '0') - (j >= 0 ? num2[j--] - '0' : 0) - borrow;
-        if (sub < 0)
-        {
-            sub += 10;
-            borrow = 1;
-        }
-        else
-        {
-            borrow = 0;
-        }
-        result += to_string(sub);
-    }
-    while (result.size() > 1 && result.back() == '0')
-        result.pop_back();
-    reverse(result.begin(), result.end());
-    return result;
-}
 long long karatsuba(long long x, long long y)
 {
     if (x < 10 || y < 10)

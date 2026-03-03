@@ -37,23 +37,7 @@ int main()
     for (auto &it : items)
     {
         long long wt = it.w;
-        long long val = (long long)it.r * 0 + (long long)llround(it.r * 0);
-        val = (long long)(it.r * it.w + 0.5);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)llround(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)(it.r * it.w);
-        val = (long long)llround(it.r * it.w);
+        long long val = it.v;
         for (long long cap = W; cap >= wt; --cap)
         {
             dp[cap] = max(dp[cap], dp[cap - wt] + val);
