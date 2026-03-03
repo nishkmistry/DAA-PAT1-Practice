@@ -1,6 +1,6 @@
 # Design and Analysis of Algorithms - PAT Practice
 
-This repository contains my implementations of classical algorithms practiced for the Practical Assessment Test (PAT) in Design and Analysis of Algorithms.
+This repository contains my implementations of classical algorithms practiced in Design and Analysis of Algorithms.
 
 ## Algorithms Covered
 
